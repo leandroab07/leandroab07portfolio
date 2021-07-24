@@ -1,0 +1,47 @@
+body{
+  background-color: #F0EDEE;
+  }
+  
+#sobre {
+  color: #0A090C;
+  margin-left: 15px;
+  text-align: center;
+  }
+
+#descricao {
+  color: #2C666E;
+  margin-right: 400px;
+  margin-left: 400px;
+  margin-top: 100px;
+  }
+
+.destaque {
+  color: #07393C;
+  }
+
+.principais {
+  font-size: 1.26em;
+  }
+
+#euimagem {
+  width: 350px;
+  border-radius: 180px 180px 180px 180px;
+  border-style: solid;
+  border-color: #07393C;
+  border-width: 3px;
+  float: left;
+  padding: 5px;
+  background-color: #07393C;
+  }
+
+#imagem-descricao {
+  display: inline-block; 
+   }
+
+#habilidades {
+  margin-left: 10px;
+   }
+
+#recomendados {
+  margin-left: 20px;
+}
