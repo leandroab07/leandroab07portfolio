@@ -84,7 +84,7 @@ body{
   display: flex; 
    }
 
-#habilidades {
+.habilidades {
   margin-left: 10px;
   font-size: 20px;
   }
@@ -99,4 +99,17 @@ body{
   text-align: center;
   font-size: 0.8em;
   margin: -10px;
+}
+
+#habilidades {
+  display: flex;
+}
+
+#habilidades div {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+#habilidades div:nth-child(1) {
+  margin-left: 10px;
 }
