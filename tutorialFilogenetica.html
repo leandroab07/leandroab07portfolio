@@ -26,28 +26,48 @@
     <h2>Abrindo os dados no MegaX</h2>
     <p>Com o programa aberto, clique na opção <strong>"File"</strong> no menu do topo do programa e, depois, clique em <strong>"Open A File/Session..."</strong>. Aparecerá uma janela para que você selecione o arquivo. Utilizaremos, neste tutorial, um arquivo "fasta" contendo o gene para a subunidade 16s de bactérias e de uma arquea que fará parte do grupo externo, ambos obtidos no Genbank. Após selecionar os dados, o programa deve mostrar as sequências de forma semelhante à imagem a seguir:</p>
 
-    <img src="imagens/alinhamentoTipos.png" alt="Programa MegaX com sequências selecionadas e um destaque nas opções de alinhamento">
+    <img src="imagens/alinhamentoTipos.png" alt="Programa MegaX com sequências selecionadas e um destaque nas opções de alinhamento.">
 
     <h2>Alinhando as sequências</h2>
     <p>Repare na região ao topo, circulada em azul, que contém os dois métodos de alinhamento disponíveis: <strong>Clustal W e Muscle</strong>. Nesse tutorial utilizaremos o alinhamento <strong>Muscle</strong>. Clique nele para fazer o alinhamento e aperte <strong>"OK"</strong> nas próxiams janelas. Elas possuem opções de configuração, como penalidade de "gaps", mas utilizaremos a configuração padrão. Vale ressaltar que a penalidade para os "gaps" não possui nenhum significado matemático ou biológico e, comumente, a configuração padrão é a que o autor encontrou melhores resultados. Após alinhado, as sequências devem ficar parecidas com a próxima imagem.</p>
 
-    <img src="imagens/alinhamentoregioes.png" alt="Programa MegaX com as sequências fornecidas alinhadas">
+    <img src="imagens/alinhamentoregioes.png" alt="Programa MegaX com as sequências fornecidas alinhadas.">
 
     <h2>Regiões do alinhamento</h2>
     <p>Com as sequências alinhadas, é possível perceber algumas regiões com asteriscos em cima, como as marcadas em azul na imagem acima. Essas são <strong>regiões conservadas</strong>, que não possuem bases nitrogenadas diferentes entre as sequências. Já as regiões sem asteriscos, como as marcadas em vermelho na imagem acima, apresentam diferenças de bases nitrogenadas entre as sequências e são chamadas de <strong>regiões sinais</strong>, pois elas possuem os sinais filogenéticos. Vale ressaltar, também, que pode haver algumas regiões, geralmente com longos "gaps", que possuem baixa acurácia quanto ao alinhamento. Essas regiões são denominada <strong>regiões de ruído</strong>. Para a sua detecção, é comum o uso de programas que utilizam múltiplos alinhamentos, por exemplo, usando método de "bootstrap", mas isso não será abordado neste tutorial.</p>
 
     <h2>Iniciando as análises filogenéticas</h2>
     <p>Após o alinhamento, clique em <strong>Data</strong>, no menu de cima do programa. Depois clique em <strong>Phylogenetic Analysis</strong>, conforme a figura abaixo. Aparecerá uma janela perguntando se as sequências são codificadoras de proteínas. No caso deste tutorial, <strong>não</strong> são. Note que as informações do alinhamento são enviadas para a outra janela do programa, onde serão serão feitos os demais passos.</p>
-    <img src="imagens/analisesFilogeneticas.png" alt="Localização da opção de análise filogenética no programa MegaX">
+    <img src="imagens/analisesFilogeneticas.png" alt="Localização da opção de análise filogenética no programa MegaX.">
 
     <h2>Escolhendo o melhor modelo evolutivo</h2>
     <p>O MegaX possui diversas ferramentas, mas apenas apenas algumas, importantes para a inferência filogenética, serão abordadas aqui. Um parâmetro muito importante para a inferência filogenética é o modelo evolutivo. A escolha do melhor modelo evolutivo para determinado conjunto de dados pode ser feita com ajuda de testes estatísticos. Para fazer esses testes, clique <strong>"Models"</strong>, circulado em azul na imagem abaixo. Clique em <strong>"Find Best DNA/Protein Models (ML)..."</strong>. Aparecerá uma janela com alguns parâmetros. Deixe a configuração padrão e note que o programa possui, para os métodos usados, a opção <strong>"Gaps/Missing Data Treatment"</strong> para possíveis remoções parciais ou totais dos gaps. Isso é comumente usado para remover as <strong>regiões de ruído</strong>.</p>
 
-    <img src="imagens/botaoModels.png" alt="" srcset="Destaque no botão models do programa MegaX">
+    <img src="imagens/botaoModels.png" alt="" srcset="Destaque no botão models do programa MegaX.">
 
     <h2>Critério de Informação de Akaike (AIC) e Critério de Informação Bayesiano (BIC)</h2>
-    <p>O MegaX realiza alguns testes estatísticos e disponibiliza, de cima para baixo, os melhores modelos evolutivos para o conjunto de dados. Vale ressaltar que, embora modelos mais complexos expliquem mais condições diversas que os dados possam ter, recomenda-se utilizar modelos mais simples que atendam ao conjunto de dados utilizados. Note, na imagem abaixo, que, na região debaixo, há uma legenda para os modelos, bem como uma explicação de quais testes foram utilizados. Note, também, que o modelo escolhido será o <strong>"Tamura-Nei"</strong> mais a <strong>"Distribuição Gama"</strong>.</p>
+    <p>O MegaX realiza alguns testes estatísticos e disponibiliza, de cima para baixo, os melhores modelos evolutivos para o conjunto de dados. Vale ressaltar que, embora modelos mais complexos expliquem mais condições diversas que os dados possam ter, recomenda-se utilizar modelos mais simples que atendam ao conjunto de dados utilizados. Note, na imagem abaixo, que, na região debaixo, há uma legenda para os modelos, bem como uma explicação de quais testes foram utilizados. Note, também, que o modelo escolhido será o <strong>"Tamura-Nei"</strong> mais <strong>"Gamma Distribution"</strong>.</p>
 
-    <img src="imagens/selecaoModelo.png" alt="Tabela contendo os modelos evolutivos e seus desempenhos nos testes estatísticos realizados pelo programa MegaX">
+    <img src="imagens/selecaoModelo.png" alt="Tabela contendo os modelos evolutivos e seus desempenhos nos testes estatísticos realizados pelo programa MegaX.">
+
+    <h2>Filogenia</h2>
+    <p>Clique na opção <strong>"Phylogeny"</strong>, no menu do programa. Aparecerá algumas opções de métodos de distância, parsimônia e probabilidade. Será utilizado, aqui, o método <strong>"Maximum Likelihood"</strong>, que é um método de probabilidade. Clique em <strong>Construct/Test Maximum Likelihoog Tree...</strong> e, depois, confirme o uso dos dados.</p>
+
+    <img src="imagens/botaoPhelogeny.png" alt="Programa MegaX com a opção Phylogeny em destaque por um círculo azul.">
+
+    <h2>Selecionando as opções</h2>
+    <p>Uma janela com diversas opções, como a da imagem abaixo, aparecerá. Não será falado, aqui, sobre todas elas. Porém, é recomendado que se utilize teste de filogenia, como o bootstrap. Esse método faz múltiplas inferências filogenéticas com pequenas alterações na amostra, como excluir um sítio ou uma região e duplicar outro sítio ou outra região. Na opção <strong>"Test of Phylogeny"</strong>, selecione <strong>"Bootstrap Method".</strong>. O número de replicações pode ser escolhido entre 50 a 10000, mas é comum encontrar trabalhos com valores de 500 ou de 1000 pra cima. Será utilizado, aqui, o valor de 1000 replicações. Mais abaixo, em <strong>"Model/Method"</strong>, é possível selecionar o modelo evolutivo desejado. Será utilizado, aqui, o modelo <strong>"Tamura-Nei"</strong>. Além disso, será selecionado em <strong>"Rates among Sites"</strong> a opção <strong>"Gamma Distributed"</strong>, conforme o modelo que obteve maior desempenho nos testes feitos anteriormente. </p>
+
+    <p>Note que há outras opções que possam ser interessantes, dependendo dos dados utilizados, como a escolha de deletar parte das regiões de gaps, deletar todas as regiões de gaps ou não deletar. Além disso, é possível escolher outras opções de método heurístico e de filtro de troca de ramo. Essas opções podem aumentar ou diminuir a acurácia, assim como o tempo de execução. Será utilizado, aqui, a configuração padrão para essas opções.</p>
+
+    <p><strong>Observação:</strong> antes de inicar o processo, tenha em mente que o método de inferência estatística utilizado, aqui, requer muito processamento e tende a ser demorado em conjuntos grandes de dados. Para esses casos, recomenda-se a utilização de um método de distância como o <strong>"Neighbor joining"</strong>.</p>
+
+    <img src="imagens/opcoesFilogenia.png" alt="Janela de opções para filogenia, no MegaX, utilizando o método de máxima verossimilhança, com destaque nas opções de teste de filogenia, seleção de modelo evolutivo e tratamento dos gaps.">
+
+    <h2>Resultado final</h2>
+    <p>Após terminar a execução, aparecerá uma nova janela com uma árvore semelhante a da imagem abaixo. Note, na imagem, que o grupo externo utilizado aqui é composto pelo 16s da bactéria <em>Sediminispirochaeta smaragdinae</em>, do filo Spirochaetes, e pelo 16 da arquea <em>Nanoarchaeum equitans</em>. Os demais OTUs (Operational taxonomic unit) são de 16s de bactérias do filo Proteobacteria.</p>
+    <p>Observe que os agrupamentos formados, em alguns casos, correspondem à classe, órdem e família dessas bactérias. Note, na imagem abaixo, que a opção destacada em azul possibilita mudar a raíz da árvore. Além disso, os valores representados na árvore corrrespondem ao valor de bootstrap, sendo que um deles está marcado em vermelho, pois é um valor mais baixo. Para alguns autores, valores abaixo de 70 indicam uma possível polítomia. Na opção do menu destacado em verde, é possível criar essas politomias a partir de um valor desejado.</p>
+    <p>Por fim, embaixo da janela há uma região, marcada em amarelo, que descreve as técnicas utilizadas para a inferência filogenética, bem como as citações para essas ferramentas.</p>
+    <img src="imagens/arvoreBruta.png" alt="Árvore filogenética gerada pelo MegaX a partir dos dados e das configurações usadas aqui.">
   </main>
 </body>
