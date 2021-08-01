@@ -21,9 +21,24 @@
   <main id="main">
     <h1>Inferência Filogenética com MegaX</h1>
     <h2>Observações Iniciais</h2>
-    <p>Este é um tutorial <strong>prático</strong>, com o intuito de mostrar como fazer, de maneira rápida, uma inferência filogenética usando o programa Mega versão X. Esse programa funciona em Windows, Mac e Linux e possui ferramentas para as principais etapas da construção de uma árvore filogenética, como alinhamento, escolha de modelo e a inferência filogenética em si. Além disso, ele é usado em diversos artigos científicos. Entretanto, vale ressaltar que existem outros métodos de alinhamento com maior acurácia e que não são encontrados no MegaX, como o Clustal Omega e o T-Coffee. Além disso, o MegaX não possui o método de inferência bayesiana, que é um método de probabilidade assim como o "Maximum Likelihood", sendo este encontrado no MegaX e o método escolhido para este tutorial.</p>
-
+    <p>Este é um tutorial <strong>prático</strong>, com o intuito de mostrar como fazer, de maneira rápida, uma inferência filogenética usando o programa Mega versão X. Esse programa funciona em Windows, Mac e Linux e possui ferramentas para as principais etapas da construção de uma árvore filogenética, como alinhamento, escolha de modelo e a inferência filogenética em si. Além disso, ele é usado em diversos artigos científicos. Entretanto, vale ressaltar que existem outros métodos de alinhamento com maior acurácia e que não são encontrados no MegaX, como o Clustal Omega e o T-Coffee. Além disso, o MegaX não possui o método de inferência bayesiana, que é um método de probabilidade assim como o "Maximum Likelihood", sendo este encontrado no MegaX e o método escolhido para este tutorial. Por fim, para inferência filogenética recomenda-se utilizar sequências homólogas.</p>
+  
     <h2>Abrindo os dados no MegaX</h2>
-    <p>Com o programa aberto, clique na opção <strong>"File"</strong> no menu do topo do programa e, depois, clique em <strong>"Open A File/Session..."</strong>. Aparecerá uma janela para que você selecione o arquivo. Utilizaremos, neste tutorial, um arquivo "fasta" contendo o gene para a subunidade 16s de bactérias e de uma arquea que fará parte do grupo externo, ambos obtidos no Genbank. Clique, <a href="dados/16s.fas">aqui</a>, caso queira baixar o arquivo "fasta"</p>
+    <p>Com o programa aberto, clique na opção <strong>"File"</strong> no menu do topo do programa e, depois, clique em <strong>"Open A File/Session..."</strong>. Aparecerá uma janela para que você selecione o arquivo. Utilizaremos, neste tutorial, um arquivo "fasta" contendo o gene para a subunidade 16s de bactérias e de uma arquea que fará parte do grupo externo, ambos obtidos no Genbank. Após selecionar os dados, o programa deve mostrar as sequências de forma semelhante à imagem a seguir:</p>
+
+    <img src="imagens/alinhamentoTipos.png" alt="Programa MegaX com sequências selecionadas e um destaque nas opções de alinhamento">
+
+    <h2>Alinhando as sequências</h2>
+    <p>Repare na região ao topo, circulada em azul, que contém os dois métodos de alinhamento disponíveis: <strong>Clustal W e Muscle</strong>. Nesse tutorial utilizaremos o alinhamento <strong>Muscle</strong>. Clique nele para fazer o alinhamento e aperte <strong>"OK"</strong> nas próxiams janelas. Elas possuem opções de configuração, como penalidade de "gaps", mas utilizaremos a configuração padrão. Vale ressaltar que a penalidade para os "gaps" não possui nenhum significado matemático ou biológico e, comumente, a configuração padrão é a que o autor encontrou melhores resultados. Após alinhado, as sequências devem ficar parecidas com a próxima imagem.</p>
+
+    <img src="imagens/alinhamentoregioes.png" alt="Programa MegaX com as sequências fornecidas alinhadas">
+
+    <h2>Regiões do alinhamento</h2>
+    <p>Com as sequências alinhadas, é possível perceber algumas regiões com asteriscos em cima, como as marcadas em azul na imagem acima. Essas são <strong>regiões conservadas</strong>, que não possuem bases nitrogenadas diferentes entre as sequências. Já as regiões sem asteriscos, como as marcadas em vermelho na imagem acima, apresentam diferenças de bases nitrogenadas entre as sequências e são chamadas de <strong>regiões sinais</strong>, pois elas possuem os sinais filogenéticos. Vale ressaltar, também, que pode haver algumas regiões, geralmente com longos "gaps", que possuem baixa acurácia quanto ao alinhamento. Essas regiões são denominada <strong>regiões de ruído</strong>. Para a sua detecção, é comum o uso de programas que utilizam múltiplos alinhamentos, por exemplo, usando método de "bootstrap", mas isso não será abordado neste tutorial.</p>
+
+    <h2 class="h2imagem">Iniciando as análises filogenéticas</h2>
+    <img class="imagemh2" src="imagens/analisesFilogeneticas.png" alt="Localização da opção de análise filogenética no programa MegaX">
+
+
   </main>
 </body>
