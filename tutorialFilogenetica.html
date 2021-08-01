@@ -36,9 +36,18 @@
     <h2>Regiões do alinhamento</h2>
     <p>Com as sequências alinhadas, é possível perceber algumas regiões com asteriscos em cima, como as marcadas em azul na imagem acima. Essas são <strong>regiões conservadas</strong>, que não possuem bases nitrogenadas diferentes entre as sequências. Já as regiões sem asteriscos, como as marcadas em vermelho na imagem acima, apresentam diferenças de bases nitrogenadas entre as sequências e são chamadas de <strong>regiões sinais</strong>, pois elas possuem os sinais filogenéticos. Vale ressaltar, também, que pode haver algumas regiões, geralmente com longos "gaps", que possuem baixa acurácia quanto ao alinhamento. Essas regiões são denominada <strong>regiões de ruído</strong>. Para a sua detecção, é comum o uso de programas que utilizam múltiplos alinhamentos, por exemplo, usando método de "bootstrap", mas isso não será abordado neste tutorial.</p>
 
-    <h2 class="h2imagem">Iniciando as análises filogenéticas</h2>
-    <img class="imagemh2" src="imagens/analisesFilogeneticas.png" alt="Localização da opção de análise filogenética no programa MegaX">
+    <h2>Iniciando as análises filogenéticas</h2>
+    <p>Após o alinhamento, clique em <strong>Data</strong>, no menu de cima do programa. Depois clique em <strong>Phylogenetic Analysis</strong>, conforme a figura abaixo. Aparecerá uma janela perguntando se as sequências são codificadoras de proteínas. No caso deste tutorial, <strong>não</strong> são. Note que as informações do alinhamento são enviadas para a outra janela do programa, onde serão serão feitos os demais passos.</p>
+    <img src="imagens/analisesFilogeneticas.png" alt="Localização da opção de análise filogenética no programa MegaX">
 
+    <h2>Escolhendo o melhor modelo evolutivo</h2>
+    <p>O MegaX possui diversas ferramentas, mas apenas apenas algumas, importantes para a inferência filogenética, serão abordadas aqui. Um parâmetro muito importante para a inferência filogenética é o modelo evolutivo. A escolha do melhor modelo evolutivo para determinado conjunto de dados pode ser feita com ajuda de testes estatísticos. Para fazer esses testes, clique <strong>"Models"</strong>, circulado em azul na imagem abaixo. Clique em <strong>"Find Best DNA/Protein Models (ML)..."</strong>. Aparecerá uma janela com alguns parâmetros. Deixe a configuração padrão e note que o programa possui, para os métodos usados, a opção <strong>"Gaps/Missing Data Treatment"</strong> para possíveis remoções parciais ou totais dos gaps. Isso é comumente usado para remover as <strong>regiões de ruído</strong>.</p>
 
+    <img src="imagens/botaoModels.png" alt="" srcset="Destaque no botão models do programa MegaX">
+
+    <h2>Critério de Informação de Akaike (AIC) e Critério de Informação Bayesiano (BIC)</h2>
+    <p>O MegaX realiza alguns testes estatísticos e disponibiliza, de cima para baixo, os melhores modelos evolutivos para o conjunto de dados. Vale ressaltar que, embora modelos mais complexos expliquem mais condições diversas que os dados possam ter, recomenda-se utilizar modelos mais simples que atendam ao conjunto de dados utilizados. Note, na imagem abaixo, que, na região debaixo, há uma legenda para os modelos, bem como uma explicação de quais testes foram utilizados. Note, também, que o modelo escolhido será o <strong>"Tamura-Nei"</strong> mais a <strong>"Distribuição Gama"</strong>.</p>
+
+    <img src="imagens/selecaoModelo.png" alt="Tabela contendo os modelos evolutivos e seus desempenhos nos testes estatísticos realizados pelo programa MegaX">
   </main>
 </body>
